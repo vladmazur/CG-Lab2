@@ -28,6 +28,7 @@
 		C21E586D18E88BC600210CBB /* CG Lab2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CG Lab2"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21E587018E88BC600210CBB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C21E587218E88BC600210CBB /* CG_Lab2.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CG_Lab2.1; sourceTree = "<group>"; };
+		C21E587A18E89E2D00210CBB /* CG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CG.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		C21E586F18E88BC600210CBB /* CG Lab2 */ = {
 			isa = PBXGroup;
 			children = (
+				C21E587A18E89E2D00210CBB /* CG.h */,
 				C21E587018E88BC600210CBB /* main.cpp */,
 				C21E587218E88BC600210CBB /* CG_Lab2.1 */,
 			);
