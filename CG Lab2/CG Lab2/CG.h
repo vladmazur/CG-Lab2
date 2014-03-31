@@ -15,8 +15,8 @@
 using namespace::std;
 
 struct Point {
-    double x;
-    double y;
+    float x;
+    float y;
     
     Point() {x=0; y=0;}
     
@@ -76,8 +76,8 @@ struct Interval {
 
 struct Vector
 {
-    double x;
-    double y;
+    float x;
+    float y;
     
     Vector(double x, double y)
     {
@@ -164,20 +164,6 @@ double minX(vector<Point> points)
     return min;
 }
 
-double averageY(vector<Point> points)
-{
-    size_t size = points.size();
-    
-    if( !size )
-        return 0;
-    
-    double sum = 0;
-    for(int i=0; i < points.size(); i++)
-        sum += points[i].y;
-    
-    return sum / size;
-}
-
 struct Polygon {
     vector<Point> vertexes;
     
@@ -197,16 +183,14 @@ struct Polygon {
             {
                 if ( intersection(liner, edge, & bothPoint) )
                 {
-                    if(bothPoint.x > candidate.x) // перескает справа, а не слева
-                        continue;
                     if (edge.start.y < edge.end.y) // start ниже
                     {
-                        if (bothPoint.x != edge.end.x && bothPoint.y != edge.end.y) //это не верхняя точка
+                        if (bothPoint.x != edge.end.x || bothPoint.y != edge.end.y) //это не верхняя точка
                             result = ! result;
                     }
                     else
                     {
-                        if (bothPoint.x != edge.start.x && bothPoint.y != edge.start.y)
+                        if (bothPoint.x != edge.start.x || bothPoint.y != edge.start.y)
                             result = ! result;
                     }
                 }
